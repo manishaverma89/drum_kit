@@ -1,7 +1,15 @@
+//  //   Button Animation
+    
+//  function buttonAnimation(currentKey){
+//     var activeButton = document.querySelectorAll("." + currentKey);
+//     activeButton.classList.add("pressed");
+//    }
+
 // Detecting keyboard press
 
 document.addEventListener("keydown", function(event){
     makesound(event.key);
+    buttonAnimation(event.key);
   
   });
    
@@ -57,11 +65,24 @@ document.addEventListener("keydown", function(event){
       document.querySelectorAll(".drum")[i].addEventListener("click", function(){
       var buttonInnerHTML = this.innerHTML;      //here 'this' means the button on which click event will be triggered
              makesound(buttonInnerHTML);
+             buttonAnimation(buttonInnerHTML);
       
            });
       }
   
   
+    //   Animation
+    
+    function buttonAnimation(currentKey){
+     var activeButton = document.querySelector("." + currentKey);
+     activeButton.classList.add("pressed");
+
+     setTimeout (function(){
+         activeButton.classList.remove("pressed");
+     }, 100);
+
+    }
   
+
   
   
