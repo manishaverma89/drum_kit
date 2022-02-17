@@ -1,11 +1,5 @@
-//  //   Button Animation
-    
-//  function buttonAnimation(currentKey){
-//     var activeButton = document.querySelectorAll("." + currentKey);
-//     activeButton.classList.add("pressed");
-//    }
 
-// Detecting keyboard press
+// Detecting keyboard press  
 
 document.addEventListener("keydown", function(event){
     makesound(event.key);
